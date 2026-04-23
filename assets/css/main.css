@@ -298,9 +298,15 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 0 0 12px rgba(255,255,255,0.2);
 }
 
-/* プライマリナビ */
+/* プライマリナビ（PCではヘッダー右に重ねる） */
 .primary-nav {
-    margin-left: auto;
+    position: fixed;
+    top: 0;
+    right: calc(var(--container-pad) + 120px);
+    height: 72px;
+    display: flex;
+    align-items: center;
+    z-index: 101;
 }
 
 .nav-menu {
