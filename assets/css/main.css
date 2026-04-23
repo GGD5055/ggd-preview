@@ -1988,6 +1988,28 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
     max-width: 700px;
 }
+.sister-character {
+    position: absolute;
+    right: -20px;
+    bottom: -30px;
+    width: 260px;
+    height: auto;
+    z-index: 1;
+    filter: drop-shadow(0 10px 24px rgba(31,164,200,0.35));
+    transition: transform 0.35s ease;
+    pointer-events: none;
+}
+.sister-card:hover .sister-character {
+    transform: translateY(-6px) rotate(-3deg);
+}
+@media (max-width: 720px) {
+    .sister-character {
+        width: 160px;
+        right: -10px;
+        bottom: -20px;
+        opacity: 0.85;
+    }
+}
 .sister-label {
     display: inline-block;
     font-size: 0.78rem;
