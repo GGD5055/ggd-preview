@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRowGLowDesign – Keep growing, keep glowing!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* プレビュー専用補正 */
+        .hero-logo img { max-width: 320px; margin: 0 auto; filter: drop-shadow(0 0 30px rgba(255,208,77,0.5)) drop-shadow(0 0 80px rgba(32,96,208,0.35)); }
+        .works-card-no-image { background: linear-gradient(135deg,#0d1530,#111c3a); display:flex; align-items:center; justify-content:center; font-size:3rem; color:#4a5a7a; aspect-ratio:4/3; }
+        .site-header { position: sticky; }
+    </style>
+</head>
+<body>
+
+<div id="page" class="site">
+
+<!-- ヘッダー -->
+<header id="masthead" class="site-header">
+    <div class="header-inner">
+        <div class="site-branding">
+            <a href="#" class="logo-link">
+                <span class="site-title-text">
+                    GRowGLowDesign.
+                </span>
+            </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="メニューを開く">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <nav class="primary-nav" id="primary-nav">
+            <ul class="nav-menu">
+                <li><a href="#hero">HOME</a></li>
+                <li class="menu-item-has-children"><a href="#services">サービス</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">イルミネーション</a></li>
+                        <li><a href="#">ステージ照明</a></li>
+                        <li><a href="#">映像製作・配信</a></li>
+                        <li><a href="#">機材レンタル</a></li>
+                    </ul>
+                </li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <div class="sns-links">
+            <a href="https://x.com/GGD5055" class="sns-link" aria-label="X" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.instagram.com/ggd_5055/" class="sns-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="https://line.me/R/ti/p/@539athhn" class="sns-link" aria-label="LINE" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+        </div>
+    </div>
+</header>
+
+<div id="content" class="site-content">
+<main id="main" class="site-main front-page">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-stars" id="hero-stars"></div>
+        </div>
+        <div class="hero-string-illumi" aria-hidden="true" id="hero-string-illumi"></div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="assets/images/logo.png" alt="GRowGLowDesign.">
+            </div>
+            <p class="hero-tagline">Keep growing, keep glowing!</p>
+            <p class="hero-sub">光と映像で、あなたの空間に特別な輝きを。</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">お問い合わせ</a>
+                <a href="#works" class="btn btn-outline">実績を見る</a>
+            </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+            <span class="scroll-line"></span>
+            <span class="scroll-text">SCROLL</span>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">SERVICES</h2>
+                <p class="section-subtitle">サービス紹介</p>
+            </div>
+            <div class="services-grid">
+
+                <a href="#" class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="12" stroke="currentColor" stroke-width="2"/><line x1="30" y1="4" x2="30" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="30" y1="48" x2="30" y2="56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="30" x2="12" y2="30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="48" y1="30" x2="56" y2="30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="10.1" y1="10.1" x2="15.8" y2="15.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="44.2" y1="44.2" x2="49.9" y2="49.9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="49.9" y1="10.1" x2="44.2" y2="15.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="15.8" y1="44.2" x2="10.1" y2="49.9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3 class="service-card-title">イルミネーション</h3>
+                    <p class="service-card-text">光の色・タイミング・動作を自由にプログラム。音楽やセンサーと連動したオリジナル演出。</p>
+                    <span class="service-card-more">詳しく見る <span class="arrow">→</span></span>
+                </a>
+
+                <a href="#" class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 60 60" fill="none"><polygon points="30,8 52,48 8,48" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="30" cy="20" r="4" fill="currentColor"/></svg>
+                    </div>
+                    <h3 class="service-card-title">ステージ照明</h3>
+                    <p class="service-card-text">ライブ・演劇・イベントに最適な照明を設計。設営からオペレートまでトータルサポート。</p>
+                    <span class="service-card-more">詳しく見る <span class="arrow">→</span></span>
+                </a>
+
+                <a href="#" class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 60 60" fill="none"><rect x="6" y="14" width="36" height="28" rx="2" stroke="currentColor" stroke-width="2"/><polyline points="42,22 54,16 54,40 42,34" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="28" r="5" stroke="currentColor" stroke-width="2"/><polygon points="22,26 28,28 22,30" fill="currentColor"/></svg>
+                    </div>
+                    <h3 class="service-card-title">映像製作・配信</h3>
+                    <p class="service-card-text">撮影・編集からYouTube等のライブ配信まで。ハイブリッドイベントにも対応。</p>
+                    <span class="service-card-more">詳しく見る <span class="arrow">→</span></span>
+                </a>
+
+                <a href="#" class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 60 60" fill="none"><rect x="10" y="20" width="40" height="22" rx="2" stroke="currentColor" stroke-width="2"/><path d="M18 20 L18 14 Q18 10 22 10 L38 10 Q42 10 42 14 L42 20" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="31" r="3" stroke="currentColor" stroke-width="2"/><circle cx="40" cy="31" r="3" stroke="currentColor" stroke-width="2"/><line x1="26" y1="31" x2="34" y2="31" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3 class="service-card-title">機材レンタル</h3>
+                    <p class="service-card-text">LEDライト・ムービングライト等をレンタル。設置・撤去・操作サポートも承ります。</p>
+                    <span class="service-card-more">詳しく見る <span class="arrow">→</span></span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKS -->
+    <section class="section works-section" id="works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">WORKS</h2>
+                <p class="section-subtitle">実績紹介</p>
+            </div>
+            <div class="works-grid">
+
+                <article class="works-card">
+                    <a href="#" class="works-card-link">
+                        <div class="works-card-image">
+                            <div class="works-card-no-image">★</div>
+                            <div class="works-card-overlay">
+                                <span class="works-card-tag">イルミネーション</span>
+                            </div>
+                        </div>
+                        <div class="works-card-body">
+                            <h3 class="works-card-title">桜ライトアップ 2022〜</h3>
+                            <p class="works-card-excerpt">桜並木を彩るプログラム制御イルミネーション。</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="works-card">
+                    <a href="#" class="works-card-link">
+                        <div class="works-card-image">
+                            <div class="works-card-no-image">✦</div>
+                            <div class="works-card-overlay">
+                                <span class="works-card-tag">ステージ照明</span>
+                            </div>
+                        </div>
+                        <div class="works-card-body">
+                            <h3 class="works-card-title">H△Gワンマンライブ</h3>
+                            <p class="works-card-excerpt">ライブ照明プランニング・当日オペレート。</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="works-card">
+                    <a href="#" class="works-card-link">
+                        <div class="works-card-image">
+                            <div class="works-card-no-image">★</div>
+                            <div class="works-card-overlay">
+                                <span class="works-card-tag">映像配信</span>
+                            </div>
+                        </div>
+                        <div class="works-card-body">
+                            <h3 class="works-card-title">野外フェスティバル 映像配信</h3>
+                            <p class="works-card-excerpt">YouTubeライブ配信・マルチカメラスイッチング。</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="works-card">
+                    <a href="#" class="works-card-link">
+                        <div class="works-card-image">
+                            <div class="works-card-no-image">✦</div>
+                            <div class="works-card-overlay">
+                                <span class="works-card-tag">イルミネーション</span>
+                            </div>
+                        </div>
+                        <div class="works-card-body">
+                            <h3 class="works-card-title">栃木県某公園 ウィンターイルミネーション</h3>
+                            <p class="works-card-excerpt">公園全体を彩る大規模イルミネーション演出。</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="works-card">
+                    <a href="#" class="works-card-link">
+                        <div class="works-card-image">
+                            <div class="works-card-no-image">★</div>
+                            <div class="works-card-overlay">
+                                <span class="works-card-tag">ステージ照明</span>
+                            </div>
+                        </div>
+                        <div class="works-card-body">
+                            <h3 class="works-card-title">某Bリーグチーム 演出照明 2019</h3>
+                            <p class="works-card-excerpt">試合演出照明・入場シーン・ハーフタイムショー。</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="works-card">
+                    <a href="#" class="works-card-link">
+                        <div class="works-card-image">
+                            <div class="works-card-no-image">✦</div>
+                            <div class="works-card-overlay">
+                                <span class="works-card-tag">イルミネーション</span>
+                            </div>
+                        </div>
+                        <div class="works-card-body">
+                            <h3 class="works-card-title">京都府某寺院 PJMイベント</h3>
+                            <p class="works-card-excerpt">プロジェクションマッピング×イルミネーション演出。</p>
+                        </div>
+                    </a>
+                </article>
+
+            </div>
+            <div class="section-footer">
+                <a href="#" class="btn btn-outline">WORKS一覧を見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-inner">
+                <div class="about-deco" aria-hidden="true">
+                    <div class="about-circle"></div>
+                    <div class="about-stars">
+                        <span>★</span><span>✦</span><span>★</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="section-header section-header--left">
+                        <h2 class="section-title">ABOUT</h2>
+                        <p class="section-subtitle">私たちについて</p>
+                    </div>
+                    <p class="about-lead">光で、夢を、カタチに。</p>
+                    <p class="about-text">
+                        GRowGLowDesignは、イルミネーション・ステージ照明・映像配信・機材レンタルを通じて、あらゆるイベント・空間に特別な輝きをお届けします。<br><br>
+                        公園から舞台、商業施設まで―光の可能性を最大限に引き出すプロフェッショナルとして、企画から施工・オペレートまで一貫してサポートします。
+                    </p>
+                    <a href="#contact" class="btn btn-primary">まずは相談する</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section" id="contact">
+        <div class="container">
+            <div class="cta-inner">
+                <h2 class="cta-title">あなたのイベントを、<br>光で彩りませんか？</h2>
+                <p class="cta-text">「こんな演出はできる？」「予算はどのくらい？」<br>まずはお気軽にお問い合わせください。</p>
+                <div class="cta-buttons">
+                    <a href="mailto:info@grow-glow.net" class="btn btn-primary btn-large">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+        <div class="cta-light-string" aria-hidden="true" style="position:relative; margin-top:3rem;">
+            <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+            <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+            <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+            <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+            <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+            <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+            <span class="bulb"></span><span class="bulb"></span>
+        </div>
+    </section>
+
+</main>
+</div>
+
+<!-- フッター -->
+<footer id="colophon" class="site-footer">
+    <div class="footer-stars" aria-hidden="true">
+        <span class="star star-1">★</span>
+        <span class="star star-2">✦</span>
+        <span class="star star-3">★</span>
+        <span class="star star-4">✦</span>
+        <span class="star star-5">★</span>
+    </div>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a href="#" class="footer-logo-link">
+                <span class="footer-logo-text">
+                    GRowGLowDesign.
+                </span>
+            </a>
+            <p class="footer-tagline">Keep growing, keep glowing!</p>
+            <div class="footer-sns">
+                <a href="https://x.com/GGD5055" class="sns-link" aria-label="X" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="https://www.instagram.com/ggd_5055/" class="sns-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                <a href="https://line.me/R/ti/p/@539athhn" class="sns-link" aria-label="LINE" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+            </div>
+        </div>
+        <nav class="footer-nav">
+            <div class="footer-nav-group">
+                <h4 class="footer-nav-title">サービス</h4>
+                <ul>
+                    <li><a href="#">イルミネーション</a></li>
+                    <li><a href="#">ステージ照明</a></li>
+                    <li><a href="#">映像製作・配信</a></li>
+                    <li><a href="#">機材レンタル</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav-group">
+                <h4 class="footer-nav-title">コンテンツ</h4>
+                <ul>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="footer-contact">
+            <h4 class="footer-nav-title">お問い合わせ</h4>
+            <a href="mailto:info@grow-glow.net" class="footer-mail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                メールでのお問い合わせ
+            </a>
+        </div>
+    </div>
+    <div class="footer-light-string" aria-hidden="true">
+        <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+        <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+        <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+        <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+        <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+        <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+        <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+        <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+        <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+        <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+    </div>
+    <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 GRowGLowDesign. All rights reserved.</p>
+    </div>
+</footer>
+
+</div><!-- /#page -->
+
+<script src="assets/js/main.js"></script>
+<script>
+// プレビュー専用: ロゴ画像なければテキスト表示
+window.addEventListener('load', function() {
+    const img = document.querySelector('.hero-logo img');
+    if (img && !img.complete) {
+        img.style.display = 'none';
+        img.nextElementSibling.style.display = 'block';
+    }
+});
+</script>
+</body>
+</html>
