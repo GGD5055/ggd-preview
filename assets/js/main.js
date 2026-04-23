@@ -108,6 +108,38 @@
     const shootingFg = document.getElementById('hero-shooting-foreground');
     if (shootingFg) createShootingStars(shootingFg);
 
+    // ロゴ内のランダム瞬きパーティクル
+    const logoParticles = document.getElementById('hero-logo-particles');
+    if (logoParticles) {
+        const colors = ['#ffffff', '#fff6c0', '#ffd862', '#ff9ec7', '#b8e6ff'];
+        const count = 18;
+        const frag = document.createDocumentFragment();
+        for (let i = 0; i < count; i++) {
+            const p = document.createElement('span');
+            const size = Math.random() * 2 + 1.2;
+            const cx = 50, cy = 50;
+            const r = Math.sqrt(Math.random()) * 40;
+            const theta = Math.random() * Math.PI * 2;
+            const x = cx + Math.cos(theta) * r;
+            const y = cy + Math.sin(theta) * r;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const dur = Math.random() * 2.5 + 1.8;
+            const delay = Math.random() * 4;
+            p.style.cssText = [
+                `left:${x}%`,
+                `top:${y}%`,
+                `width:${size}px`,
+                `height:${size}px`,
+                `background:${color}`,
+                `box-shadow:0 0 6px ${color}`,
+                `--dur:${dur}s`,
+                `--delay:-${delay}s`,
+            ].join(';');
+            frag.appendChild(p);
+        }
+        logoParticles.appendChild(frag);
+    }
+
     /* ─────────────────────────────────────
        ストリングイルミネーション生成
     ───────────────────────────────────── */
