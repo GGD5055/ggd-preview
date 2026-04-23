@@ -2073,14 +2073,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sister-sub {
     display: inline-block;
-    font-size: 1.15rem;
-    font-weight: 800;
-    color: #1fa4c8;
-    background: #ffffff;
-    padding: 6px 18px;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff6aa0 0%, #ffb347 50%, #ffd000 100%);
+    padding: 8px 24px;
     border-radius: 40px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 22px rgba(255,110,160,0.45), 0 0 0 3px rgba(255,255,255,0.7) inset;
+    text-shadow: 0 1px 4px rgba(200,40,90,0.45);
     margin: 0 0 22px;
+    letter-spacing: 0.03em;
+    animation: subShine 2.4s ease-in-out infinite;
+}
+.sister-sub::before {
+    content: 'NEW';
+    position: absolute;
+    top: -10px;
+    left: -14px;
+    display: inline-block;
+    background: #ff2d6f;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 900;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.12em;
+    transform: rotate(-8deg);
+    box-shadow: 0 3px 8px rgba(255,45,111,0.5);
+    text-shadow: none;
+}
+@keyframes subShine {
+    0%, 100% { box-shadow: 0 6px 22px rgba(255,110,160,0.45), 0 0 0 3px rgba(255,255,255,0.7) inset; }
+    50%      { box-shadow: 0 6px 28px rgba(255,208,0,0.65), 0 0 0 3px rgba(255,255,255,0.85) inset; }
 }
 .sister-desc {
     font-size: 1.05rem;
