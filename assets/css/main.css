@@ -1875,21 +1875,27 @@ h1, h2, h3, h4, h5, h6 {
 
     .primary-nav {
         position: fixed;
-        top: 72px;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         background: rgba(10, 26, 72, 0.98);
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
-        padding: 2rem 1rem 3rem;
+        padding: 5rem 1rem 3rem;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         opacity: 0;
         pointer-events: none;
         transition: opacity var(--transition-base);
-        z-index: 99;
+        z-index: 101;
+    }
+
+    /* ハンバーガー（×）はメニュー上に表示 */
+    .nav-toggle {
+        position: relative;
+        z-index: 102;
     }
 
     .primary-nav.is-open {
