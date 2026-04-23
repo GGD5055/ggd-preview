@@ -13,9 +13,22 @@
             position: relative;
             padding: 140px var(--container-pad) 80px;
             text-align: center;
-            background: radial-gradient(ellipse at 50% 40%, #1a3a80 0%, #0a1a48 70%);
+            background:
+                linear-gradient(180deg, rgba(10,26,72,0.55) 0%, rgba(10,26,72,0.7) 60%, rgba(10,26,72,0.92) 100%),
+                url('../assets/images/stage-lighting/stage-06.jpg') center/cover no-repeat,
+                radial-gradient(ellipse at 50% 40%, #1a3a80 0%, #0a1a48 70%);
             overflow: hidden;
         }
+        .service-page-hero > * { position: relative; z-index: 3; }
+        .service-gallery-item { overflow: hidden; }
+        .service-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+        .service-gallery-item:hover img { transform: scale(1.05); }
         .service-page-hero::before {
             content: '';
             position: absolute;
@@ -229,12 +242,11 @@
             <p class="section-subtitle">施工事例</p>
         </div>
         <div class="service-gallery-grid">
-            <div class="service-gallery-item">✦</div>
-            <div class="service-gallery-item">✦</div>
-            <div class="service-gallery-item">✦</div>
-            <div class="service-gallery-item">✦</div>
-            <div class="service-gallery-item">✦</div>
-            <div class="service-gallery-item">✦</div>
+            <div class="service-gallery-item"><img src="../assets/images/stage-lighting/stage-04.jpg" alt="ステージ照明施工事例" loading="lazy"></div>
+            <div class="service-gallery-item"><img src="../assets/images/stage-lighting/stage-01.jpg" alt="ステージ照明施工事例" loading="lazy"></div>
+            <div class="service-gallery-item"><img src="../assets/images/stage-lighting/stage-02.jpg" alt="ステージ照明施工事例" loading="lazy"></div>
+            <div class="service-gallery-item"><img src="../assets/images/stage-lighting/stage-03.jpg" alt="ステージ照明施工事例" loading="lazy"></div>
+            <div class="service-gallery-item"><img src="../assets/images/stage-lighting/stage-05.jpg" alt="ステージ照明施工事例" loading="lazy"></div>
         </div>
     </section>
 
