@@ -451,10 +451,24 @@ h1, h2, h3, h4, h5, h6 {
     animation: logoSparkle 3.2s linear infinite;
 }
 .hero-logo::after {
-    animation: logoSparkle 4.5s linear infinite reverse;
+    inset: 12%;
+    background:
+        radial-gradient(circle 2.5px at 20% 30%, #ffffff 0%, rgba(255,255,255,0) 65%),
+        radial-gradient(circle 2px at 75% 25%, #fff6c0 0%, rgba(255,246,192,0) 65%),
+        radial-gradient(circle 3px at 55% 60%, #ffd862 0%, rgba(255,216,98,0) 65%),
+        radial-gradient(circle 1.8px at 32% 72%, #ff9ec7 0%, rgba(255,158,199,0) 65%),
+        radial-gradient(circle 2px at 68% 80%, #b8e6ff 0%, rgba(184,230,255,0) 65%),
+        radial-gradient(circle 2px at 40% 18%, #ffffff 0%, rgba(255,255,255,0) 65%),
+        radial-gradient(circle 1.5px at 82% 55%, #ffd862 0%, rgba(255,216,98,0) 65%),
+        radial-gradient(circle 1.5px at 18% 52%, #ffffff 0%, rgba(255,255,255,0) 65%);
+    animation: logoParticles 4.5s linear infinite reverse;
     animation-delay: -1.6s;
-    transform: scale(1.08);
-    opacity: 0.8;
+    mix-blend-mode: screen;
+    filter: blur(0.4px);
+}
+@keyframes logoParticles {
+    0%, 100% { opacity: 0.9; transform: scale(1)    rotate(0deg); }
+    50%      { opacity: 0.35; transform: scale(1.05) rotate(180deg); }
 }
 @keyframes logoSparkle {
     0%   { transform: rotate(0deg)   scale(1);    opacity: 0.95; }
