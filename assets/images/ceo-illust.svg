@@ -1,112 +1,161 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" aria-label="代表イラスト">
   <defs>
-    <radialGradient id="ceoBg" cx="50%" cy="45%" r="60%">
-      <stop offset="0%" stop-color="#fff3d1"/>
-      <stop offset="55%" stop-color="#ffd48a"/>
-      <stop offset="100%" stop-color="#f39a3a"/>
+    <radialGradient id="popBg" cx="50%" cy="45%" r="62%">
+      <stop offset="0%" stop-color="#ffe8f3"/>
+      <stop offset="55%" stop-color="#ffd1e7"/>
+      <stop offset="100%" stop-color="#ffb5d9"/>
     </radialGradient>
-    <linearGradient id="beam1" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#fff6c8" stop-opacity="0.9"/>
+    <linearGradient id="beamP" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff8c8" stop-opacity="0.95"/>
       <stop offset="100%" stop-color="#ffd862" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="beam2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#cfe8ff" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#3bc1e3" stop-opacity="0"/>
+    <linearGradient id="beamC" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#d8f4ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7de0ff" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="shirt" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#2b3a4a"/>
-      <stop offset="100%" stop-color="#111a25"/>
+    <linearGradient id="shirtP" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ff7aa8"/>
+      <stop offset="100%" stop-color="#d94a83"/>
     </linearGradient>
-    <clipPath id="circleClip">
+    <linearGradient id="hairP" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#6b3a1a"/>
+      <stop offset="100%" stop-color="#3d1f0c"/>
+    </linearGradient>
+    <clipPath id="circleClipP">
       <circle cx="200" cy="220" r="190"/>
     </clipPath>
   </defs>
 
-  <!-- Background circle -->
-  <circle cx="200" cy="220" r="190" fill="url(#ceoBg)"/>
+  <!-- Background -->
+  <circle cx="200" cy="220" r="190" fill="url(#popBg)"/>
 
-  <g clip-path="url(#circleClip)">
-    <!-- Stage light beams -->
-    <polygon points="60,0 120,0 170,440 110,440" fill="url(#beam1)"/>
-    <polygon points="280,0 340,0 300,440 240,440" fill="url(#beam2)"/>
+  <g clip-path="url(#circleClipP)">
+    <!-- Light beams -->
+    <polygon points="40,0 110,0 170,440 120,440" fill="url(#beamP)"/>
+    <polygon points="290,0 360,0 280,440 230,440" fill="url(#beamC)"/>
 
-    <!-- Floating sparkles -->
+    <!-- Confetti dots -->
+    <g>
+      <circle cx="72" cy="92" r="6" fill="#ffd862"/>
+      <circle cx="330" cy="106" r="5" fill="#7de0ff"/>
+      <circle cx="346" cy="210" r="7" fill="#ff9ec7"/>
+      <circle cx="60" cy="230" r="5" fill="#a0e2a0"/>
+      <circle cx="90" cy="390" r="6" fill="#ffd862"/>
+      <circle cx="320" cy="380" r="6" fill="#b8a3ff"/>
+    </g>
     <g fill="#ffffff" opacity="0.9">
-      <circle cx="80" cy="90" r="4"/>
-      <circle cx="320" cy="110" r="3"/>
-      <circle cx="340" cy="200" r="5"/>
-      <circle cx="70" cy="240" r="3"/>
-      <circle cx="110" cy="380" r="4"/>
-      <circle cx="310" cy="360" r="4"/>
-    </g>
-    <g fill="#fff7c8">
-      <path d="M60 160 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z"/>
-      <path d="M340 300 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z"/>
+      <path d="M66 160 l5 10 10 5 -10 5 -5 10 -5 -10 -10 -5 10 -5z"/>
+      <path d="M336 298 l5 10 10 5 -10 5 -5 10 -5 -10 -10 -5 10 -5z"/>
+      <path d="M120 60 l4 8 8 4 -8 4 -4 8 -4 -8 -8 -4 8 -4z"/>
     </g>
 
-    <!-- Body / shoulders -->
-    <path d="M80 480 C 90 380 140 340 200 340 C 260 340 310 380 320 480 Z" fill="url(#shirt)"/>
-    <!-- Collar hint -->
-    <path d="M180 352 L200 372 L220 352" stroke="#3bc1e3" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Ponytail back (behind head) -->
+    <path d="M278 190
+             C 318 200 342 240 342 296
+             C 342 342 318 382 288 404
+             C 298 368 298 326 282 290
+             C 272 260 268 232 272 204 Z"
+          fill="url(#hairP)"/>
+    <!-- Hair tie -->
+    <ellipse cx="286" cy="214" rx="16" ry="8" fill="#ff7aa8" stroke="#d94a83" stroke-width="2"/>
+    <!-- Ponytail highlight -->
+    <path d="M296 240 Q312 280 304 330" stroke="#8a4e25" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- Body -->
+    <path d="M80 480 C 92 378 144 338 200 338 C 256 338 308 378 320 480 Z" fill="url(#shirtP)"/>
+    <!-- Collar/neck T -->
+    <path d="M186 354 Q200 376 214 354" fill="#ffffff" opacity="0.3"/>
 
     <!-- Neck -->
-    <rect x="184" y="292" width="32" height="36" rx="8" fill="#f2c79b"/>
-    <path d="M184 310 Q200 326 216 310" fill="#d6a477" opacity="0.6"/>
+    <rect x="184" y="292" width="32" height="40" rx="10" fill="#ffdcb8"/>
+    <path d="M184 310 Q200 328 216 310" fill="#e9b98a" opacity="0.55"/>
 
-    <!-- Face -->
-    <ellipse cx="200" cy="240" rx="76" ry="86" fill="#fadcb5"/>
-    <!-- Face shade -->
-    <path d="M130 240 Q140 316 200 326 Q170 310 160 260 Z" fill="#e6bc8c" opacity="0.45"/>
+    <!-- Face (round, chibi) -->
+    <ellipse cx="200" cy="244" rx="92" ry="96" fill="#ffe4c6"/>
+    <!-- Cheek base shade -->
+    <path d="M118 254 Q124 330 200 336 Q154 320 140 268 Z" fill="#f2c597" opacity="0.4"/>
 
-    <!-- Hair back -->
-    <path d="M124 224 C120 160 160 116 200 114 C244 112 284 154 280 222
-             C278 246 272 260 272 260 L268 200
-             C248 168 220 162 200 162 C180 162 152 168 132 200 L128 260
-             C128 260 126 246 124 224 Z"
-          fill="#2b1f17"/>
-    <!-- Side bangs -->
-    <path d="M134 202 C160 170 190 164 210 170 C226 176 236 190 236 204
-             C220 190 200 184 180 190 C162 196 148 210 138 222 Z"
-          fill="#2b1f17"/>
-    <!-- Hair strand -->
-    <path d="M236 204 Q252 222 244 256" stroke="#2b1f17" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Hair front -->
+    <path d="M112 232
+             C 108 160 156 108 200 108
+             C 246 108 292 158 288 228
+             C 284 208 270 188 254 180
+             C 246 196 232 206 214 208
+             C 208 192 196 186 186 186
+             C 170 186 156 198 150 212
+             C 138 204 124 210 112 232 Z"
+          fill="url(#hairP)"/>
+    <!-- Side locks -->
+    <path d="M116 232 C 108 280 112 318 124 344"
+          stroke="#4c2512" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M282 224 C 292 260 290 296 282 326"
+          stroke="#4c2512" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Bangs strands -->
+    <path d="M168 196 Q180 214 176 234" stroke="#4c2512" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M218 198 Q228 214 224 232" stroke="#4c2512" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Hair shine -->
+    <path d="M160 150 Q200 132 240 150" stroke="#c98550" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.75"/>
 
     <!-- Ears -->
-    <ellipse cx="126" cy="250" rx="8" ry="12" fill="#f2c79b"/>
-    <ellipse cx="274" cy="250" rx="8" ry="12" fill="#f2c79b"/>
+    <ellipse cx="116" cy="258" rx="9" ry="14" fill="#ffdcb8"/>
+    <ellipse cx="284" cy="258" rx="9" ry="14" fill="#ffdcb8"/>
 
-    <!-- Eyebrows -->
-    <path d="M158 224 Q172 218 186 224" stroke="#2b1f17" stroke-width="4" fill="none" stroke-linecap="round"/>
-    <path d="M214 224 Q228 218 242 224" stroke="#2b1f17" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Eyebrows (thin/cute) -->
+    <path d="M156 224 Q170 218 184 224" stroke="#4c2512" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M216 224 Q230 218 244 224" stroke="#4c2512" stroke-width="3.5" fill="none" stroke-linecap="round"/>
 
-    <!-- Eyes -->
-    <g fill="#2b1f17">
-      <ellipse cx="172" cy="248" rx="6" ry="8"/>
-      <ellipse cx="228" cy="248" rx="6" ry="8"/>
+    <!-- BIG sparkly eyes -->
+    <g>
+      <!-- left -->
+      <ellipse cx="170" cy="256" rx="14" ry="18" fill="#3a1e0e"/>
+      <ellipse cx="170" cy="252" rx="10" ry="14" fill="#7b3a18"/>
+      <circle cx="166" cy="250" r="6" fill="#ffffff"/>
+      <circle cx="174" cy="260" r="3" fill="#ffffff"/>
+      <!-- right -->
+      <ellipse cx="230" cy="256" rx="14" ry="18" fill="#3a1e0e"/>
+      <ellipse cx="230" cy="252" rx="10" ry="14" fill="#7b3a18"/>
+      <circle cx="226" cy="250" r="6" fill="#ffffff"/>
+      <circle cx="234" cy="260" r="3" fill="#ffffff"/>
     </g>
-    <!-- Eye shine -->
-    <circle cx="175" cy="245" r="2.2" fill="#ffffff"/>
-    <circle cx="231" cy="245" r="2.2" fill="#ffffff"/>
+
+    <!-- Eyelashes -->
+    <path d="M184 244 Q188 240 192 242" stroke="#3a1e0e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M156 244 Q152 240 148 242" stroke="#3a1e0e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M244 244 Q248 240 252 242" stroke="#3a1e0e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M216 244 Q212 240 208 242" stroke="#3a1e0e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 
     <!-- Cheeks -->
-    <circle cx="152" cy="272" r="10" fill="#ff9ea3" opacity="0.55"/>
-    <circle cx="248" cy="272" r="10" fill="#ff9ea3" opacity="0.55"/>
+    <ellipse cx="146" cy="284" rx="16" ry="10" fill="#ff9fb8" opacity="0.75"/>
+    <ellipse cx="254" cy="284" rx="16" ry="10" fill="#ff9fb8" opacity="0.75"/>
 
-    <!-- Nose -->
-    <path d="M200 260 Q204 276 200 282" stroke="#c9986a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Nose (tiny dot) -->
+    <path d="M199 278 Q201 282 199 284" stroke="#c98550" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 
-    <!-- Mouth -->
-    <path d="M186 294 Q200 306 214 294" stroke="#9c4a3a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- Smile (open happy) -->
+    <path d="M182 302 Q200 322 218 302" stroke="#a03a4a" stroke-width="4" fill="#ff6b87" stroke-linejoin="round"/>
+    <path d="M186 305 Q200 316 214 305" fill="#ffffff" opacity="0.35"/>
+
+    <!-- Hair bow (cute accent) -->
+    <g>
+      <path d="M248 158 Q234 150 238 166 Q240 174 254 174 Z" fill="#ffd862" stroke="#e0a914" stroke-width="2"/>
+      <path d="M262 160 Q278 150 276 168 Q274 176 260 174 Z" fill="#ffd862" stroke="#e0a914" stroke-width="2"/>
+      <circle cx="258" cy="168" r="4" fill="#e0a914"/>
+    </g>
 
     <!-- Headset -->
-    <path d="M122 214 C132 140 268 140 278 214" stroke="#2b3a4a" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <rect x="116" y="210" width="16" height="34" rx="6" fill="#1f2a36"/>
-    <rect x="268" y="210" width="16" height="34" rx="6" fill="#1f2a36"/>
+    <path d="M116 220 C 128 136 272 136 284 220" stroke="#2b3a4a" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <rect x="108" y="218" width="18" height="36" rx="8" fill="#2b3a4a"/>
+    <rect x="274" y="218" width="18" height="36" rx="8" fill="#2b3a4a"/>
     <!-- Mic arm -->
-    <path d="M132 244 Q150 288 170 300" stroke="#1f2a36" stroke-width="4" fill="none" stroke-linecap="round"/>
-    <circle cx="170" cy="302" r="6" fill="#1f2a36"/>
+    <path d="M126 252 Q144 296 166 308" stroke="#2b3a4a" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="166" cy="310" r="7" fill="#2b3a4a"/>
+    <circle cx="166" cy="310" r="3" fill="#ff7aa8"/>
+
+    <!-- Tiny star charm on ponytail -->
+    <path d="M300 212 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z" fill="#ffd862"/>
   </g>
 
   <!-- Ring -->
-  <circle cx="200" cy="220" r="190" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.85"/>
+  <circle cx="200" cy="220" r="190" fill="none" stroke="#ffffff" stroke-width="5" opacity="0.9"/>
+  <circle cx="200" cy="220" r="196" fill="none" stroke="#ff9ec7" stroke-width="3" opacity="0.6" stroke-dasharray="4 8"/>
 </svg>
