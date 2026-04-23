@@ -134,10 +134,19 @@
             line-height: 1.8;
             margin: 0;
         }
-        .service-process-photo {
-            max-width: 520px;
+        .service-process-photos {
+            max-width: 960px;
             margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .service-process-photo {
+            margin: 0;
             padding: 0;
+        }
+        @media (max-width: 640px) {
+            .service-process-photos { grid-template-columns: 1fr; gap: 2rem; }
         }
         .service-process-photo img {
             width: 100%;
@@ -367,10 +376,16 @@
             </div>
         </div>
 
-        <figure class="service-process-photo">
-            <img src="../assets/images/illumination-programming.jpg" alt="イルミネーションプログラミング制作中の様子" loading="lazy">
-            <figcaption>音楽同期プログラムの制作風景。シーン・色・タイミングを一つひとつ検証しながら作り込みます。</figcaption>
-        </figure>
+        <div class="service-process-photos">
+            <figure class="service-process-photo">
+                <img src="../assets/images/illumination-programming.jpg" alt="イルミネーションプログラミング制作中の様子" loading="lazy">
+                <figcaption>音楽同期プログラムの制作風景。シーン・色・タイミングを一つひとつ検証しながら作り込みます。</figcaption>
+            </figure>
+            <figure class="service-process-photo">
+                <img src="../assets/images/illumination/illumi-16.jpg" alt="イルミネーション制御用分電盤内部" loading="lazy">
+                <figcaption>自社製作の制御分電盤。DMXコントローラー・ネットワーク機器・電源を一体化し、現場で安定運用。</figcaption>
+            </figure>
+        </div>
     </section>
 
     <!-- Gallery -->
@@ -410,7 +425,6 @@
             <div class="service-gallery-item"><img src="../assets/images/illumination/illumi-12.jpg" alt="イルミネーション施工事例" loading="lazy"></div>
             <div class="service-gallery-item"><img src="../assets/images/illumination/illumi-13.jpg" alt="イルミネーション施工事例" loading="lazy"></div>
             <div class="service-gallery-item"><img src="../assets/images/illumination/illumi-15.jpg" alt="イルミネーション施工事例" loading="lazy"></div>
-            <div class="service-gallery-item"><img src="../assets/images/illumination/illumi-16.jpg" alt="イルミネーション施工事例" loading="lazy"></div>
             <div class="service-gallery-item"><img src="../assets/images/illumination/illumi-17.jpg" alt="イルミネーション施工事例" loading="lazy"></div>
         </div>
     </section>
