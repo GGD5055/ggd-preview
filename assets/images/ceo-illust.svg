@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" aria-label="代表イラスト">
+  <defs>
+    <radialGradient id="ceoBg" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#fff3d1"/>
+      <stop offset="55%" stop-color="#ffd48a"/>
+      <stop offset="100%" stop-color="#f39a3a"/>
+    </radialGradient>
+    <linearGradient id="beam1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff6c8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffd862" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beam2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#cfe8ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#3bc1e3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2b3a4a"/>
+      <stop offset="100%" stop-color="#111a25"/>
+    </linearGradient>
+    <clipPath id="circleClip">
+      <circle cx="200" cy="220" r="190"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="200" cy="220" r="190" fill="url(#ceoBg)"/>
+
+  <g clip-path="url(#circleClip)">
+    <!-- Stage light beams -->
+    <polygon points="60,0 120,0 170,440 110,440" fill="url(#beam1)"/>
+    <polygon points="280,0 340,0 300,440 240,440" fill="url(#beam2)"/>
+
+    <!-- Floating sparkles -->
+    <g fill="#ffffff" opacity="0.9">
+      <circle cx="80" cy="90" r="4"/>
+      <circle cx="320" cy="110" r="3"/>
+      <circle cx="340" cy="200" r="5"/>
+      <circle cx="70" cy="240" r="3"/>
+      <circle cx="110" cy="380" r="4"/>
+      <circle cx="310" cy="360" r="4"/>
+    </g>
+    <g fill="#fff7c8">
+      <path d="M60 160 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z"/>
+      <path d="M340 300 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z"/>
+    </g>
+
+    <!-- Body / shoulders -->
+    <path d="M80 480 C 90 380 140 340 200 340 C 260 340 310 380 320 480 Z" fill="url(#shirt)"/>
+    <!-- Collar hint -->
+    <path d="M180 352 L200 372 L220 352" stroke="#3bc1e3" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- Neck -->
+    <rect x="184" y="292" width="32" height="36" rx="8" fill="#f2c79b"/>
+    <path d="M184 310 Q200 326 216 310" fill="#d6a477" opacity="0.6"/>
+
+    <!-- Face -->
+    <ellipse cx="200" cy="240" rx="76" ry="86" fill="#fadcb5"/>
+    <!-- Face shade -->
+    <path d="M130 240 Q140 316 200 326 Q170 310 160 260 Z" fill="#e6bc8c" opacity="0.45"/>
+
+    <!-- Hair back -->
+    <path d="M124 224 C120 160 160 116 200 114 C244 112 284 154 280 222
+             C278 246 272 260 272 260 L268 200
+             C248 168 220 162 200 162 C180 162 152 168 132 200 L128 260
+             C128 260 126 246 124 224 Z"
+          fill="#2b1f17"/>
+    <!-- Side bangs -->
+    <path d="M134 202 C160 170 190 164 210 170 C226 176 236 190 236 204
+             C220 190 200 184 180 190 C162 196 148 210 138 222 Z"
+          fill="#2b1f17"/>
+    <!-- Hair strand -->
+    <path d="M236 204 Q252 222 244 256" stroke="#2b1f17" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+    <!-- Ears -->
+    <ellipse cx="126" cy="250" rx="8" ry="12" fill="#f2c79b"/>
+    <ellipse cx="274" cy="250" rx="8" ry="12" fill="#f2c79b"/>
+
+    <!-- Eyebrows -->
+    <path d="M158 224 Q172 218 186 224" stroke="#2b1f17" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M214 224 Q228 218 242 224" stroke="#2b1f17" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- Eyes -->
+    <g fill="#2b1f17">
+      <ellipse cx="172" cy="248" rx="6" ry="8"/>
+      <ellipse cx="228" cy="248" rx="6" ry="8"/>
+    </g>
+    <!-- Eye shine -->
+    <circle cx="175" cy="245" r="2.2" fill="#ffffff"/>
+    <circle cx="231" cy="245" r="2.2" fill="#ffffff"/>
+
+    <!-- Cheeks -->
+    <circle cx="152" cy="272" r="10" fill="#ff9ea3" opacity="0.55"/>
+    <circle cx="248" cy="272" r="10" fill="#ff9ea3" opacity="0.55"/>
+
+    <!-- Nose -->
+    <path d="M200 260 Q204 276 200 282" stroke="#c9986a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Mouth -->
+    <path d="M186 294 Q200 306 214 294" stroke="#9c4a3a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Headset -->
+    <path d="M122 214 C132 140 268 140 278 214" stroke="#2b3a4a" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <rect x="116" y="210" width="16" height="34" rx="6" fill="#1f2a36"/>
+    <rect x="268" y="210" width="16" height="34" rx="6" fill="#1f2a36"/>
+    <!-- Mic arm -->
+    <path d="M132 244 Q150 288 170 300" stroke="#1f2a36" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="170" cy="302" r="6" fill="#1f2a36"/>
+  </g>
+
+  <!-- Ring -->
+  <circle cx="200" cy="220" r="190" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.85"/>
+</svg>
