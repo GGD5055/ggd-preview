@@ -1721,9 +1721,38 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     display: block;
     width: 12px;
+    height: 14px;
+    border-radius: 50% 50% 55% 55% / 45% 45% 65% 65%;
+    transform-origin: 50% -12px;
+    animation: bulbGlow 3s ease-in-out infinite, bulbSwing 5s ease-in-out infinite;
+}
+.string-bulb::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 1px;
     height: 12px;
-    border-radius: 50%;
-    animation: bulbGlow 3s ease-in-out infinite;
+    background: rgba(120, 100, 80, 0.55);
+    transform: translateX(-50%);
+}
+.string-bulb::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    width: 4px;
+    height: 3px;
+    background: #6b5a3a;
+    border-radius: 1px;
+    transform: translateX(-50%);
+}
+.string-bulb:nth-child(even) { animation-duration: 3s, 6s; }
+.string-bulb:nth-child(3n)   { animation-duration: 3s, 4.2s; }
+
+@keyframes bulbSwing {
+    0%, 100% { transform: rotate(-4deg); }
+    50%      { transform: rotate(4deg);  }
 }
 
 .string-bulb--gold {

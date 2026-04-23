@@ -184,7 +184,7 @@
             const colorClass = colors[i % colors.length];
             bulb.className = `string-bulb string-bulb--${colorClass}`;
             bulb.style.left = `${pt.x - 6}px`;
-            bulb.style.top = `${pt.y - 10}px`;
+            bulb.style.top = `${pt.y + 2}px`;
             stringContainer.appendChild(bulb);
 
             // ピンク電球の下に小さな星を吊り下げ
@@ -193,7 +193,7 @@
                 star.className = 'string-star';
                 star.textContent = '✦';
                 star.style.left = `${pt.x - 3}px`;
-                star.style.top = `${pt.y + 20}px`;
+                star.style.top = `${pt.y + 32}px`;
                 star.style.fontSize = `${Math.random() * 6 + 8}px`;
                 stringContainer.appendChild(star);
             }
