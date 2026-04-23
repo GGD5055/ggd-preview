@@ -2080,3 +2080,44 @@ h1, h2, h3, h4, h5, h6 {
     .sister-card { padding: 44px 28px; border-radius: 22px; }
     .sister-desc br { display: none; }
 }
+
+/* ====================================
+   Company — 会社概要
+   ==================================== */
+.company-section { padding: 96px 0; background: #fafbfc; }
+.company-table {
+    max-width: 820px;
+    margin: 48px auto 0;
+    border-top: 1px solid #e5e7eb;
+}
+.company-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    padding: 20px 8px;
+    border-bottom: 1px solid #e5e7eb;
+}
+.company-row dt {
+    font-weight: 700;
+    color: #1fa4c8;
+    letter-spacing: 0.04em;
+}
+.company-row dd {
+    margin: 0;
+    color: #2b2f36;
+    line-height: 1.7;
+}
+.company-row dd a { color: #1fa4c8; text-decoration: underline; }
+.company-sub {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 13px;
+    color: #6b7280;
+}
+@media (max-width: 720px) {
+    .company-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 16px 4px;
+    }
+}
