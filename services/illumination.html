@@ -13,9 +13,13 @@
             position: relative;
             padding: 140px var(--container-pad) 80px;
             text-align: center;
-            background: radial-gradient(ellipse at 50% 40%, #1a3a80 0%, #0a1a48 70%);
+            background:
+                linear-gradient(180deg, rgba(10,26,72,0.55) 0%, rgba(10,26,72,0.7) 60%, rgba(10,26,72,0.92) 100%),
+                url('../assets/images/illumination/illumi-14.jpg') center/cover no-repeat,
+                radial-gradient(ellipse at 50% 40%, #1a3a80 0%, #0a1a48 70%);
             overflow: hidden;
         }
+        .service-page-hero > * { position: relative; z-index: 3; }
         .page-hero-garland {
             position: absolute;
             top: 0;
