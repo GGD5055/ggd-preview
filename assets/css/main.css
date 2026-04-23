@@ -2109,6 +2109,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ====================================
+   Works — Instagram Feed
+   ==================================== */
+.works-intro {
+    text-align: center;
+    color: #6b7280;
+    margin: 32px 0 24px;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+}
+.works-feed {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 8px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04) inset;
+}
+
+/* ====================================
    Company — 会社概要
    ==================================== */
 .company-section { padding: 96px 0; background: #fafbfc; }
