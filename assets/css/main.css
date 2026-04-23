@@ -2144,9 +2144,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 22px;
     color: #1b2330;
 }
+.ceo-name-sep {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ffd862;
+    font-size: 14px;
+    vertical-align: middle;
+    text-shadow: 0 0 6px rgba(255,216,98,0.6);
+}
 .ceo-name-en {
     display: inline-block;
-    margin-left: 10px;
     font-size: 12px;
     letter-spacing: 0.16em;
     color: #6b7280;
