@@ -2144,6 +2144,15 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 22px;
     color: #1b2330;
 }
+.ceo-name-en {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: #6b7280;
+    font-weight: 500;
+    vertical-align: middle;
+}
 .ceo-sub {
     margin: 0 0 14px;
     font-size: 13px;
