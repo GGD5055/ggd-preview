@@ -1858,6 +1858,19 @@ h1, h2, h3, h4, h5, h6 {
     /* ナビ トグル */
     .nav-toggle {
         display: flex;
+        flex-shrink: 0;
+        margin-right: 0;
+    }
+
+    /* ヘッダー内の詰め調整 */
+    .header-inner {
+        padding: 0 1rem;
+        gap: 0.5rem;
+    }
+
+    .site-title-text {
+        font-size: 1.05rem;
+        letter-spacing: 0.01em;
     }
 
     .primary-nav {
