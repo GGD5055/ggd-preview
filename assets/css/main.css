@@ -1898,6 +1898,37 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 .nav-external:hover { color: #1fa4c8 !important; }
+.submenu-bubblin-item {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed rgba(59,193,227,0.35);
+}
+.submenu-bubblin-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 14px !important;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #e8fbff 0%, #ffffff 50%, #fff4fa 100%);
+    box-shadow: 0 6px 18px rgba(31,164,200,0.22), 0 0 0 1px rgba(59,193,227,0.25) inset;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.submenu-bubblin-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 24px rgba(31,164,200,0.32), 0 0 0 1px rgba(59,193,227,0.45) inset;
+}
+.submenu-bubblin-btn-logo {
+    display: block;
+    height: 44px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(31,164,200,0.25));
+}
+.submenu-bubblin-arrow {
+    color: #1fa4c8;
+    font-weight: 700;
+    font-size: 14px;
+}
 
 .sister-section {
     padding: 80px 0;
