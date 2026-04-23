@@ -2215,9 +2215,9 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: radial-gradient(ellipse at center, rgba(255,255,255,0.85) 0%, rgba(255,241,168,0.55) 40%, rgba(255,216,98,0.18) 65%, transparent 85%);
-    -webkit-mask-image: radial-gradient(ellipse at center, #000 40%, rgba(0,0,0,0.85) 65%, transparent 92%);
-    mask-image: radial-gradient(ellipse at center, #000 40%, rgba(0,0,0,0.85) 65%, transparent 92%);
+    background: radial-gradient(ellipse at center, rgba(255,241,168,0.28) 0%, rgba(255,216,98,0.12) 50%, transparent 78%);
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 45%, rgba(0,0,0,0.8) 70%, transparent 94%);
+    mask-image: radial-gradient(ellipse at center, #000 45%, rgba(0,0,0,0.8) 70%, transparent 94%);
     border-radius: inherit;
 }
 .about-content--sparkle .about-lead {
