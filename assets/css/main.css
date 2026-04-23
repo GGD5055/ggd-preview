@@ -1920,7 +1920,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .submenu-bubblin-btn-logo {
     display: block;
-    height: 44px;
+    height: 64px;
     width: auto;
     filter: drop-shadow(0 2px 4px rgba(31,164,200,0.25));
 }
