@@ -2040,24 +2040,31 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
 }
 .sister-title {
-    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-size: clamp(2.4rem, 6vw, 4rem);
     font-weight: 900;
     letter-spacing: 0.02em;
-    margin: 0 0 10px;
+    margin: 0 0 14px;
     color: #ffffff;
-    text-shadow: 0 2px 16px rgba(0,60,90,0.25);
+    text-shadow: 0 2px 18px rgba(0,60,90,0.35), 0 0 24px rgba(255,255,255,0.25);
 }
 .sister-sub {
-    font-size: 1.05rem;
-    font-weight: 700;
-    opacity: 0.95;
-    margin: 0 0 20px;
+    display: inline-block;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #1fa4c8;
+    background: #ffffff;
+    padding: 6px 18px;
+    border-radius: 40px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    margin: 0 0 22px;
 }
 .sister-desc {
-    font-size: 0.98rem;
-    line-height: 1.9;
+    font-size: 1.05rem;
+    line-height: 1.95;
     margin: 0 0 28px;
-    opacity: 0.92;
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 0 1px 6px rgba(0,60,90,0.4);
 }
 .sister-cta {
     display: inline-flex;
