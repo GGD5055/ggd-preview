@@ -1450,7 +1450,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-brand .footer-logo-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     margin-bottom: 1rem;
 }
 
