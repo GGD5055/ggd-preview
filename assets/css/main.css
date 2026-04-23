@@ -2206,9 +2206,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-content--sparkle {
     position: relative;
-    padding: 56px 32px;
-    background: radial-gradient(ellipse at top, rgba(255,241,168,0.22), rgba(255,216,98,0.06) 55%, transparent 75%);
-    border-radius: 24px;
+    padding: 72px 48px;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.85) 0%, rgba(255,241,168,0.55) 40%, rgba(255,216,98,0.18) 65%, transparent 85%);
+    border-radius: 32px;
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 40%, rgba(0,0,0,0.85) 65%, transparent 92%);
+    mask-image: radial-gradient(ellipse at center, #000 40%, rgba(0,0,0,0.85) 65%, transparent 92%);
 }
 .about-content--sparkle .about-lead {
     font-size: clamp(2rem, 4.4vw, 3.4rem);
