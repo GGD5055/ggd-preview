@@ -414,6 +414,14 @@ h1, h2, h3, h4, h5, h6 {
     inset: 0;
 }
 
+.hero-shooting-foreground {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    overflow: hidden;
+}
+
 .hero-content {
     position: relative;
     z-index: 2;

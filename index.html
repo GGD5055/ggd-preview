@@ -6,7 +6,7 @@
     <title>GRowGLowDesign – Keep growing, keep glowing!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Dancing+Script:wght@600;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css?v=21">
+    <link rel="stylesheet" href="assets/css/main.css?v=22">
     <style>
         /* プレビュー専用補正 */
         .hero-logo img { max-width: 500px; width: 100%; margin: 0 auto; filter: drop-shadow(0 0 30px rgba(255,208,77,0.5)) drop-shadow(0 0 80px rgba(32,96,208,0.35)); }
@@ -61,6 +61,7 @@
         <div class="hero-bg">
             <div class="hero-stars" id="hero-stars"></div>
         </div>
+        <div class="hero-shooting-foreground" id="hero-shooting-foreground" aria-hidden="true"></div>
         <div class="hero-string-illumi" aria-hidden="true" id="hero-string-illumi"></div>
         <div class="hero-content">
             <div class="hero-logo">
@@ -342,7 +343,7 @@
 
 </div><!-- /#page -->
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=22"></script>
 <script>
 // プレビュー専用: ロゴ画像なければテキスト表示
 window.addEventListener('load', function() {

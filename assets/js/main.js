@@ -71,9 +71,6 @@
         }
 
         container.appendChild(fragment);
-
-        // 流れ星
-        createShootingStars(container);
     }
 
     function createShootingStars(container) {
@@ -106,6 +103,10 @@
     // Hero
     const heroStars = document.getElementById('hero-stars');
     if (heroStars) createStars(heroStars, 150);
+
+    // 流れ星（ロゴの前面に流す）
+    const shootingFg = document.getElementById('hero-shooting-foreground');
+    if (shootingFg) createShootingStars(shootingFg);
 
     /* ─────────────────────────────────────
        ストリングイルミネーション生成
