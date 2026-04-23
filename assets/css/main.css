@@ -2129,6 +2129,56 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-content--centered { max-width: 820px; margin: 0 auto; text-align: center; }
 .about-cta { text-align: center; margin-top: 32px; }
+
+.about-content--sparkle {
+    position: relative;
+    padding: 48px 32px;
+    background: radial-gradient(ellipse at top, rgba(255,241,168,0.22), rgba(255,216,98,0.06) 55%, transparent 75%);
+    border-radius: 24px;
+}
+.about-content--sparkle .about-lead {
+    background: linear-gradient(90deg, #ffd862 0%, #ffb347 45%, #ff9ec7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 8px rgba(255, 216, 98, 0.55));
+    font-weight: 700;
+}
+.about-content--sparkle .sparkle {
+    position: absolute;
+    color: #ffd862;
+    text-shadow: 0 0 10px rgba(255,216,98,0.85), 0 0 18px rgba(255,158,199,0.5);
+    animation: sparkleTwinkle 2.8s ease-in-out infinite;
+    pointer-events: none;
+    user-select: none;
+}
+.about-content--sparkle .sparkle-1 { top: 8%;  left: 6%;  font-size: 22px; animation-delay: 0s; }
+.about-content--sparkle .sparkle-2 { top: 18%; right: 8%; font-size: 16px; animation-delay: 0.6s; color: #ff9ec7; }
+.about-content--sparkle .sparkle-3 { top: 62%; left: 4%;  font-size: 14px; animation-delay: 1.2s; color: #fff7c8; }
+.about-content--sparkle .sparkle-4 { bottom: 12%; right: 6%; font-size: 20px; animation-delay: 1.8s; }
+.about-content--sparkle .sparkle-5 { bottom: 28%; left: 12%; font-size: 12px; animation-delay: 2.4s; color: #b8a3ff; }
+@keyframes sparkleTwinkle {
+    0%, 100% { opacity: 0.35; transform: scale(0.85) rotate(0deg); }
+    50%      { opacity: 1;    transform: scale(1.15) rotate(20deg); }
+}
+.about-catch {
+    display: inline-block;
+    padding: 4px 2px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+.about-catch-label {
+    background: linear-gradient(90deg, #c97e30, #ffd862 50%, #c97e30);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+.about-catch-accent {
+    color: #ff9ec7;
+    text-shadow: 0 0 6px rgba(255,158,199,0.5);
+    font-weight: 700;
+}
 .about-ceo-meta { margin-top: 16px; text-align: center; }
 .about-ceo-meta .ceo-role { display: inline-block; font-size: 12px; letter-spacing: 0.18em; color: #c97e30; margin-bottom: 6px; }
 .about-ceo-meta .ceo-name { font-size: 22px; margin: 0 0 4px; font-weight: 700; }
