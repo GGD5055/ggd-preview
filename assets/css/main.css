@@ -2127,6 +2127,12 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 8px 24px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04) inset;
 }
 
+.about-ceo-meta { margin-top: 16px; text-align: center; }
+.about-ceo-meta .ceo-role { display: inline-block; font-size: 12px; letter-spacing: 0.18em; color: #c97e30; margin-bottom: 6px; }
+.about-ceo-meta .ceo-name { font-size: 22px; margin: 0 0 4px; font-weight: 700; }
+.about-ceo-meta .ceo-sub { font-size: 13px; color: #6b7280; margin: 0 0 10px; }
+.about-ceo-meta .ceo-quote { font-size: 13px; line-height: 1.8; color: #4b5563; text-align: left; }
+
 /* ====================================
    Company — 会社概要
    ==================================== */
