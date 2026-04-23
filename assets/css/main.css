@@ -268,13 +268,14 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
 }
 
+/* ロゴ（左端固定） */
 .site-branding {
-    margin-right: auto;
-}
-
-/* ロゴ */
-.site-branding {
+    position: absolute;
+    left: var(--container-pad);
+    top: 50%;
+    transform: translateY(-50%);
     flex-shrink: 0;
+    z-index: 2;
 }
 
 .logo-link {
