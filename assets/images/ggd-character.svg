@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" aria-label="GRowGLowDesign キャラクター">
+  <defs>
+    <radialGradient id="bulbGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#fff7c8"/>
+      <stop offset="55%" stop-color="#ffd862"/>
+      <stop offset="100%" stop-color="#ff9f3a"/>
+    </radialGradient>
+    <radialGradient id="haloGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff1a8" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#ffd862" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffd862" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="baseGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#c7cfd6"/>
+      <stop offset="100%" stop-color="#8a95a0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Halo / glow -->
+  <circle cx="200" cy="200" r="190" fill="url(#haloGrad)"/>
+
+  <!-- Sparkles -->
+  <g fill="#ffd862" opacity="0.9">
+    <path d="M70 120 l6 14 14 6 -14 6 -6 14 -6 -14 -14 -6 14 -6z"/>
+    <path d="M330 90 l5 11 11 5 -11 5 -5 11 -5 -11 -11 -5 11 -5z"/>
+    <path d="M340 280 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z"/>
+    <path d="M60 310 l5 11 11 5 -11 5 -5 11 -5 -11 -11 -5 11 -5z"/>
+  </g>
+
+  <!-- Leaves (sprout) -->
+  <g stroke="#2f9b5e" stroke-width="4" fill="#3fb574" stroke-linejoin="round">
+    <path d="M200 60 C176 40 150 44 138 30 C150 60 170 78 198 78 Z"/>
+    <path d="M200 60 C224 40 250 44 262 30 C250 60 230 78 202 78 Z"/>
+    <line x1="200" y1="78" x2="200" y2="100" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bulb body -->
+  <path d="M200 95
+           C138 95 96 142 96 198
+           C96 240 122 272 144 290
+           C156 300 160 308 160 320
+           L240 320
+           C240 308 244 300 256 290
+           C278 272 304 240 304 198
+           C304 142 262 95 200 95 Z"
+        fill="url(#bulbGlow)" stroke="#e07a1b" stroke-width="4"/>
+
+  <!-- Shine highlight -->
+  <ellipse cx="158" cy="160" rx="22" ry="34" fill="#ffffff" opacity="0.55" transform="rotate(-20 158 160)"/>
+
+  <!-- Face -->
+  <g fill="#3a2a10">
+    <!-- eyes -->
+    <circle cx="170" cy="210" r="9"/>
+    <circle cx="230" cy="210" r="9"/>
+    <!-- eye shine -->
+    <circle cx="173" cy="207" r="3" fill="#ffffff"/>
+    <circle cx="233" cy="207" r="3" fill="#ffffff"/>
+  </g>
+  <!-- cheeks -->
+  <circle cx="148" cy="238" r="11" fill="#ff8a8a" opacity="0.75"/>
+  <circle cx="252" cy="238" r="11" fill="#ff8a8a" opacity="0.75"/>
+  <!-- smile -->
+  <path d="M178 244 Q200 264 222 244" stroke="#3a2a10" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <!-- Screw base threads -->
+  <g fill="url(#baseGrad)" stroke="#5b6770" stroke-width="2">
+    <rect x="156" y="320" width="88" height="14" rx="3"/>
+    <rect x="158" y="338" width="84" height="12" rx="3"/>
+    <rect x="160" y="354" width="80" height="12" rx="3"/>
+  </g>
+  <!-- base tip -->
+  <path d="M172 370 L228 370 L214 392 L186 392 Z" fill="#6d7883" stroke="#3f4750" stroke-width="2"/>
+</svg>
