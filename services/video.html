@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>映像製作・配信 – GRowGLowDesign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Dancing+Script:wght@600;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css?v=31">
+    <style>
+        .site-header { position: sticky; }
+        .service-page-hero {
+            position: relative;
+            padding: 140px var(--container-pad) 80px;
+            text-align: center;
+            background: radial-gradient(ellipse at 50% 40%, #1a3a80 0%, #0a1a48 70%);
+            overflow: hidden;
+        }
+        .service-page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle 2px at 10% 20%, #fff 0%, transparent 60%),
+                radial-gradient(circle 1.5px at 80% 30%, #ffd862 0%, transparent 60%),
+                radial-gradient(circle 2px at 30% 70%, #ff9ec7 0%, transparent 60%),
+                radial-gradient(circle 1.5px at 70% 80%, #b8e6ff 0%, transparent 60%),
+                radial-gradient(circle 2px at 90% 60%, #fff 0%, transparent 60%);
+            opacity: 0.7;
+            animation: twinkle 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+        .service-page-eyebrow {
+            font-family: var(--font-script);
+            font-size: clamp(1.4rem, 3vw, 2.2rem);
+            color: var(--color-gold);
+            margin-bottom: 0.5rem;
+        }
+        .service-page-title {
+            font-family: var(--font-logo);
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            color: #f6f7ff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.08em;
+        }
+        .service-page-lead {
+            max-width: 720px;
+            margin: 0 auto;
+            color: var(--color-text-muted);
+            font-size: clamp(1rem, 1.4vw, 1.15rem);
+            line-height: 1.9;
+        }
+        .service-detail {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 80px var(--container-pad);
+        }
+        .service-detail h3 {
+            font-family: var(--font-logo);
+            font-size: 1.5rem;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+        .service-detail p {
+            line-height: 2;
+            margin-bottom: 1.5rem;
+        }
+        .service-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .service-feature {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+        }
+        .service-feature h4 {
+            color: var(--color-gold);
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .service-feature p {
+            font-size: 0.92rem;
+            color: var(--color-text-muted);
+            line-height: 1.8;
+            margin: 0;
+        }
+        .service-gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px var(--container-pad) 80px;
+        }
+        .service-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .service-gallery-item {
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg,#0d1530,#111c3a);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a5a7a;
+            font-size: 2rem;
+        }
+        .service-equipment {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px var(--container-pad) 80px;
+        }
+        .service-equipment ul {
+            columns: 2;
+            column-gap: 2rem;
+            list-style: none;
+            padding: 0;
+        }
+        .service-equipment li {
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed rgba(255,255,255,0.08);
+            break-inside: avoid;
+        }
+        .service-equipment li::before {
+            content: '✦ ';
+            color: var(--color-gold);
+            margin-right: 0.5rem;
+        }
+        .service-back {
+            text-align: center;
+            padding: 40px var(--container-pad);
+        }
+        .service-back a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-text-muted);
+            transition: color var(--transition-fast);
+        }
+        .service-back a:hover { color: var(--color-gold); }
+        @media (max-width: 768px) {
+            .service-equipment ul { columns: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="page" class="site">
+
+<!-- ヘッダー -->
+<header id="masthead" class="site-header">
+    <div class="header-inner">
+        <div class="site-branding">
+            <a href="../index.html" class="logo-link">
+                <span class="site-title-text">GRowGLowDesign.</span>
+            </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="メニューを開く">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <div class="sns-links">
+            <a href="https://x.com/GGD5055" class="sns-link" aria-label="X" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.instagram.com/ggd_5055/" class="sns-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="https://line.me/R/ti/p/@539athhn" class="sns-link" aria-label="LINE" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+        </div>
+    </div>
+</header>
+
+<nav class="primary-nav" id="primary-nav">
+    <ul class="nav-menu">
+        <li><a href="../index.html#hero">HOME</a></li>
+        <li><a href="../index.html#services">サービス</a></li>
+        <li><a href="../index.html#works">WORKS</a></li>
+        <li><a href="https://ggd5055.github.io/bubblin-preview/" class="nav-external" target="_blank" rel="noopener">BUBBLIN SERIES ↗</a></li>
+        <li><a href="../index.html#contact">お問い合わせ</a></li>
+    </ul>
+</nav>
+
+<div id="content" class="site-content">
+<main id="main" class="site-main">
+
+    <!-- Page Hero -->
+    <section class="service-page-hero">
+        <p class="service-page-eyebrow">Video & Streaming</p>
+        <h1 class="service-page-title">映像製作・配信</h1>
+        <p class="service-page-lead">イベント映像収録・編集から、LEDビジョンへの中継、<br>プロジェクションマッピングまで対応。会場の体験を映像で拡張します。</p>
+    </section>
+
+    <!-- Detail -->
+    <section class="service-detail">
+        <h3>できること</h3>
+        <p>
+            イベント・ライブの映像収録、編集、アーカイブ納品から、会場内LEDビジョンへのスイッチング中継、
+            建築や什器を活用したプロジェクションマッピングまで、映像まわりを一気通貫でサポートします。
+            複数カメラ運用・リアルタイムスイッチング・YouTube Live等への配信にも対応。
+        </p>
+
+        <div class="service-feature-grid">
+            <div class="service-feature">
+                <h4>撮影・収録</h4>
+                <p>複数カメラでのマルチアングル撮影。会場の熱量を逃さず記録。</p>
+            </div>
+            <div class="service-feature">
+                <h4>LEDビジョン中継</h4>
+                <p>会場LEDへのリアルタイムスイッチング。観客の視線を集中。</p>
+            </div>
+            <div class="service-feature">
+                <h4>ライブ配信</h4>
+                <p>YouTube Live・Zoom・専用プラットフォームへの安定配信を構築。</p>
+            </div>
+            <div class="service-feature">
+                <h4>プロジェクションマッピング</h4>
+                <p>建物/什器/スクリーンを映像で彩る空間演出。高輝度プロジェクター運用。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="service-gallery">
+        <div class="section-header section-header--left">
+            <h2 class="section-title">WORKS</h2>
+            <p class="section-subtitle">施工事例</p>
+        </div>
+        <div class="service-gallery-grid">
+            <div class="service-gallery-item">✦</div>
+            <div class="service-gallery-item">✦</div>
+            <div class="service-gallery-item">✦</div>
+            <div class="service-gallery-item">✦</div>
+            <div class="service-gallery-item">✦</div>
+            <div class="service-gallery-item">✦</div>
+        </div>
+    </section>
+
+    <!-- Equipment -->
+    <section class="service-equipment">
+        <div class="section-header section-header--left">
+            <h2 class="section-title">EQUIPMENT</h2>
+            <p class="section-subtitle">主な対応機材</p>
+        </div>
+        <ul>
+            <li>シネマカメラ・ビデオカメラ（4K対応）</li>
+            <li>ライブスイッチャー（ATEM等）</li>
+            <li>高輝度プロジェクター（〜20,000lm）</li>
+            <li>プロジェクションマッピングソフト</li>
+            <li>ワイヤレス伝送システム</li>
+            <li>配信用エンコーダー／PC</li>
+            <li>音声ミキサー・各種マイク</li>
+            <li>LEDビジョン・映像モニター</li>
+        </ul>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-inner">
+                <h2 class="cta-title">その感動、光がもっと深くする。</h2>
+                <p class="cta-text">「こんな演出はできる？」「予算はどのくらい？」<br>まずはお気軽にお問い合わせください。</p>
+                <div class="cta-buttons">
+                    <a href="mailto:info@grow-glow.net" class="btn btn-primary btn-large">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="service-back">
+        <a href="../index.html#services">← サービス一覧へ戻る</a>
+    </div>
+
+</main>
+</div>
+
+<!-- フッター -->
+<footer id="colophon" class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a href="../index.html" class="footer-logo-link">
+                <img src="../assets/images/logo.png" alt="GRowGLowDesign." class="footer-logo-img">
+                <span class="footer-logo-text">GRowGLowDesign.</span>
+            </a>
+            <p class="footer-tagline">Keep growing, keep glowing!</p>
+        </div>
+        <nav class="footer-nav">
+            <div class="footer-nav-group">
+                <h4 class="footer-nav-title">サービス</h4>
+                <ul>
+                    <li><a href="illumination.html">イルミネーション</a></li>
+                    <li><a href="stage-lighting.html">ステージ照明</a></li>
+                    <li><a href="video.html">映像製作・配信</a></li>
+                    <li><a href="equipment.html">機材販売・レンタル</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="footer-contact">
+            <h4 class="footer-nav-title">お問い合わせ</h4>
+            <a href="mailto:info@grow-glow.net" class="footer-mail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                メールでのお問い合わせ
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 GRowGLowDesign. All rights reserved.</p>
+    </div>
+</footer>
+
+</div>
+
+<script src="../assets/js/main.js?v=25"></script>
+</body>
+</html>
