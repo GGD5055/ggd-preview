@@ -1925,6 +1925,7 @@ h1, h2, h3, h4, h5, h6 {
         left: 0;
         right: 0;
         bottom: 0;
+        height: auto;
         background: rgba(10, 26, 72, 0.98);
         display: flex;
         align-items: center;
