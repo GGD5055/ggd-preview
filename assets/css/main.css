@@ -445,7 +445,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-tagline {
     font-family: var(--font-script);
-    font-size: clamp(1.8rem, 4.4vw, 3rem);
+    font-size: clamp(2.6rem, 7vw, 5rem);
     color: var(--color-gold);
     text-shadow: var(--glow-gold);
     letter-spacing: 0.05em;
