@@ -1995,7 +1995,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 240px;
     height: auto;
     z-index: 1;
-    mix-blend-mode: multiply;
+    filter: drop-shadow(0 8px 20px rgba(31,100,140,0.35));
     transition: transform 0.35s ease;
     pointer-events: none;
 }
