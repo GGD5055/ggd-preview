@@ -227,15 +227,16 @@
             padding: 40px var(--container-pad) 80px;
         }
         .service-equipment ul {
-            columns: 2;
-            column-gap: 2rem;
+            columns: 1;
             list-style: none;
             padding: 0;
         }
         .service-equipment li {
             padding: 0.6rem 0;
             border-bottom: 1px dashed rgba(255,255,255,0.08);
-            break-inside: avoid;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .service-equipment li::before {
             content: '✦ ';
