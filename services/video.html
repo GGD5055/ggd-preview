@@ -96,6 +96,20 @@
             margin: 0 auto;
             padding: 40px var(--container-pad) 80px;
         }
+        .service-gallery-featured {
+            max-width: 960px;
+            margin: 2rem auto 2.5rem;
+        }
+        .service-gallery-item--featured {
+            aspect-ratio: 16/9;
+            width: 100%;
+            box-shadow: 0 0 40px rgba(255,208,77,0.15), 0 0 80px rgba(32,96,208,0.2);
+        }
+        .service-gallery-item--featured iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
         .service-gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -233,6 +247,11 @@
         <div class="section-header section-header--left">
             <h2 class="section-title">WORKS</h2>
             <p class="section-subtitle">施工事例</p>
+        </div>
+        <div class="service-gallery-featured">
+            <div class="service-gallery-item service-gallery-item--featured">
+                <iframe src="https://www.youtube.com/embed/5G7G74K9zT4?rel=0" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </div>
         <div class="service-gallery-grid">
             <div class="service-gallery-item"><img src="../assets/images/video/video-04.jpg" alt="映像製作事例1" loading="lazy"></div>
