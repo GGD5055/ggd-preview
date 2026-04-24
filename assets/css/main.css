@@ -2426,6 +2426,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-content--sparkle .about-text {
     font-size: clamp(1rem, 1.25vw, 1.15rem);
     line-height: 2.1;
+    color: #ffffff;
 }
 .about-content--sparkle .about-catch {
     font-size: 1.2em;
