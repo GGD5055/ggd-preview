@@ -935,6 +935,35 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
 }
 
+.cta-sparkle {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.85;
+}
+.cta-sparkle svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.cta-sparkle circle,
+.cta-sparkle .sparkle-star path {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ctaSparkle 3.2s ease-in-out infinite;
+    animation-delay: var(--d, 0s);
+    filter: drop-shadow(0 0 6px rgba(255, 220, 140, 0.6));
+}
+.cta-sparkle .sparkle-star path {
+    animation-duration: 2.4s;
+    filter: drop-shadow(0 0 8px rgba(255, 244, 194, 0.9));
+}
+@keyframes ctaSparkle {
+    0%, 100% { opacity: 0.2; transform: scale(0.7); }
+    50% { opacity: 1; transform: scale(1.15); }
+}
+
 .cta-title {
     font-family: var(--font-heading);
     font-size: clamp(1.5rem, 3vw, 2.5rem);
