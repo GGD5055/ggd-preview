@@ -52,6 +52,32 @@
             font-size: clamp(1rem, 1.4vw, 1.15rem);
             line-height: 1.9;
         }
+        .page-hero-camera {
+            position: absolute;
+            right: 5%;
+            bottom: 8%;
+            width: clamp(100px, 14vw, 180px);
+            opacity: 0.88;
+            filter: drop-shadow(0 0 16px rgba(255,216,98,0.35));
+            pointer-events: none;
+            z-index: 2;
+            animation: cameraFloat 5s ease-in-out infinite;
+        }
+        .page-hero-camera .lens-glow {
+            transform-origin: center;
+            animation: lensPulse 2.6s ease-in-out infinite;
+        }
+        @keyframes cameraFloat {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-8px) rotate(2deg); }
+        }
+        @keyframes lensPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        @media (max-width: 640px) {
+            .page-hero-camera { right: 4%; bottom: 4%; width: 90px; }
+        }
         .service-detail {
             max-width: 960px;
             margin: 0 auto;
@@ -225,6 +251,32 @@
         <p class="service-page-eyebrow">Video & Streaming</p>
         <h1 class="service-page-title">映像製作・配信</h1>
         <p class="service-page-lead">イベント映像収録・編集から、LEDビジョンへの中継、<br>プロジェクションマッピングまで対応。会場の体験を映像で拡張します。</p>
+        <svg class="page-hero-camera" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+                <radialGradient id="lensGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#fff" stop-opacity="0.95"/>
+                    <stop offset="40%" stop-color="#ffd862" stop-opacity="0.7"/>
+                    <stop offset="100%" stop-color="#ff9ec7" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+            <!-- body -->
+            <rect x="30" y="40" width="110" height="70" rx="8" fill="#1a2446" stroke="#ffd862" stroke-width="2"/>
+            <!-- top hump (viewfinder) -->
+            <rect x="55" y="25" width="40" height="20" rx="3" fill="#1a2446" stroke="#ffd862" stroke-width="2"/>
+            <!-- viewfinder eye piece (back) -->
+            <rect x="20" y="55" width="14" height="24" rx="2" fill="#1a2446" stroke="#ffd862" stroke-width="2"/>
+            <!-- lens barrel -->
+            <rect x="138" y="55" width="40" height="40" rx="4" fill="#1a2446" stroke="#ffd862" stroke-width="2"/>
+            <circle cx="158" cy="75" r="15" fill="#0a1230" stroke="#ffd862" stroke-width="2"/>
+            <circle class="lens-glow" cx="158" cy="75" r="11" fill="url(#lensGrad)"/>
+            <circle cx="158" cy="75" r="4" fill="#ffd862"/>
+            <!-- REC light -->
+            <circle cx="125" cy="55" r="3" fill="#ff5c7c">
+                <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+            </circle>
+            <!-- handle -->
+            <rect x="50" y="15" width="50" height="6" rx="2" fill="#ffd862" opacity="0.7"/>
+        </svg>
     </section>
 
     <!-- Detail -->
