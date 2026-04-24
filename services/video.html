@@ -56,7 +56,7 @@
             position: absolute;
             right: 5%;
             bottom: 8%;
-            width: clamp(100px, 14vw, 180px);
+            width: clamp(140px, 18vw, 240px);
             opacity: 0.88;
             filter: drop-shadow(0 0 16px rgba(255,216,98,0.35));
             pointer-events: none;
@@ -251,31 +251,50 @@
         <p class="service-page-eyebrow">Video & Streaming</p>
         <h1 class="service-page-title">映像製作・配信</h1>
         <p class="service-page-lead">イベント映像収録・編集から、LEDビジョンへの中継、<br>プロジェクションマッピングまで対応。会場の体験を映像で拡張します。</p>
-        <svg class="page-hero-camera" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="page-hero-camera" viewBox="0 0 260 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <defs>
                 <radialGradient id="lensGrad" cx="50%" cy="50%" r="50%">
                     <stop offset="0%" stop-color="#fff" stop-opacity="0.95"/>
-                    <stop offset="40%" stop-color="#ffd862" stop-opacity="0.7"/>
+                    <stop offset="35%" stop-color="#ffd862" stop-opacity="0.75"/>
                     <stop offset="100%" stop-color="#ff9ec7" stop-opacity="0"/>
                 </radialGradient>
             </defs>
-            <!-- body -->
-            <rect x="30" y="40" width="110" height="70" rx="8" fill="#1a2446" stroke="#ffd862" stroke-width="2"/>
-            <!-- top hump (viewfinder) -->
-            <rect x="55" y="25" width="40" height="20" rx="3" fill="#1a2446" stroke="#ffd862" stroke-width="2"/>
-            <!-- viewfinder eye piece (back) -->
-            <rect x="20" y="55" width="14" height="24" rx="2" fill="#1a2446" stroke="#ffd862" stroke-width="2"/>
-            <!-- lens barrel -->
-            <rect x="138" y="55" width="40" height="40" rx="4" fill="#1a2446" stroke="#ffd862" stroke-width="2"/>
-            <circle cx="158" cy="75" r="15" fill="#0a1230" stroke="#ffd862" stroke-width="2"/>
-            <circle class="lens-glow" cx="158" cy="75" r="11" fill="url(#lensGrad)"/>
-            <circle cx="158" cy="75" r="4" fill="#ffd862"/>
-            <!-- REC light -->
-            <circle cx="125" cy="55" r="3" fill="#ff5c7c">
+            <g fill="#1a2446" stroke="#ffd862" stroke-width="2" stroke-linejoin="round">
+                <!-- shoulder/body base -->
+                <path d="M32 110 L32 138 Q32 146 40 146 L170 146 Q178 146 178 138 L178 110 Z"/>
+                <!-- main body -->
+                <path d="M40 70 L40 115 L178 115 L178 85 L170 78 L150 78 L150 70 Z"/>
+                <!-- viewfinder/eye cup on back-top -->
+                <path d="M22 78 L22 100 Q22 104 26 104 L40 104 L40 74 L26 74 Q22 74 22 78 Z"/>
+                <!-- top handle (NX5R signature top carry handle) -->
+                <path d="M60 50 L60 56 L150 56 L150 50 Q150 46 146 46 L64 46 Q60 46 60 50 Z"/>
+                <!-- handle rise struts -->
+                <rect x="62" y="56" width="6" height="16"/>
+                <rect x="142" y="56" width="6" height="16"/>
+                <!-- accessory shoe on handle -->
+                <rect x="95" y="40" width="22" height="8" rx="1"/>
+                <!-- built-in mic (long, pointing forward) -->
+                <rect x="118" y="34" width="60" height="10" rx="4"/>
+                <circle cx="172" cy="39" r="3" fill="#0a1230"/>
+                <!-- XLR jack protrusion on top-rear -->
+                <rect x="68" y="30" width="18" height="18" rx="2"/>
+                <!-- lens barrel (long, prominent) -->
+                <rect x="178" y="78" width="58" height="46" rx="4"/>
+                <!-- lens hood/matte flare -->
+                <path d="M236 74 L252 68 L252 134 L236 128 Z"/>
+            </g>
+            <!-- lens front glass -->
+            <ellipse cx="244" cy="101" rx="6" ry="30" fill="#0a1230" stroke="#ffd862" stroke-width="1.5"/>
+            <ellipse class="lens-glow" cx="244" cy="101" rx="4" ry="24" fill="url(#lensGrad)"/>
+            <!-- focus/zoom rings on barrel -->
+            <line x1="195" y1="78" x2="195" y2="124" stroke="#ffd862" stroke-width="1.5" opacity="0.7"/>
+            <line x1="215" y1="78" x2="215" y2="124" stroke="#ffd862" stroke-width="1.5" opacity="0.7"/>
+            <!-- REC tally light -->
+            <circle cx="158" cy="95" r="3.5" fill="#ff5c7c">
                 <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
             </circle>
-            <!-- handle -->
-            <rect x="50" y="15" width="50" height="6" rx="2" fill="#ffd862" opacity="0.7"/>
+            <!-- brand dot -->
+            <circle cx="100" cy="98" r="1.8" fill="#ffd862" opacity="0.6"/>
         </svg>
     </section>
 
